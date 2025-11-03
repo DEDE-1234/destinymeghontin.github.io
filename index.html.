@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destiny Meghontin — Microsoft 365 Administrator</title>
+  <meta name="description" content="Microsoft 365 Administrator. Remote M365 support, PowerShell automation, Teams, Exchange, SharePoint.">
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --card:#111214;
+      --muted:#9aa4ad;
+      --accent:#0078D4; /* Microsoft 365 blue */
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#070708 0%, #0e0e10 100%);color:#e6eef3}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:980px;margin:40px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2b9ef3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#06131b}
+    h1{margin:0;font-size:26px}
+    .tag{color:var(--muted);margin-top:6px}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:26px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .services li{margin:8px 0}
+    .section-title{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+
+    .cta{display:flex;gap:12px;margin-top:16px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted)}
+
+    pre{background:var(--glass);padding:12px;border-radius:8px;overflow:auto;font-family:SFMono-Regular, Menlo, Monaco, 'Courier New', monospace;font-size:13px}
+
+    .meta{color:var(--muted);font-size:14px}
+    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
+
+    .pricing{display:flex;gap:12px}
+    .tier{flex:1;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.025)}
+    .tier h3{margin:0}
+    .small{font-size:13px;color:var(--muted)}
+
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .testimonial{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .container{margin:18px;padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">DM</div>
+      <div>
+        <h1>Meghontin Destiny OSARIMAZUN</h1>
+        <div class="tag">Microsoft 365 Administrator — Remote M365 support & PowerShell automation</div>
+        <div class="meta">Lagos, Nigeria • <a href="mailto:meghontin90@gmail.com">meghontin90@gmail.com</a> • <a href="https://linkedin.com/in/destiny-meghontin" target="_blank">LinkedIn</a></div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="section-title">About</div>
+        <p>I manage Microsoft 365 environments for growing teams. I automate user and license workflows with PowerShell. I fix Exchange, Teams and SharePoint issues remotely. I deliver predictable monthly support so small businesses stay productive and secure.</p>
+
+        <div style="margin-top:18px">
+          <div class="section-title">Services</div>
+          <ul class="services">
+            <li>Microsoft 365 setup and onboarding (Exchange, Teams, SharePoint, OneDrive)</li>
+            <li>User & license management automation (PowerShell)</li>
+            <li>Mailbox sync & migration fixes</li>
+            <li>Security hygiene: MFA, Conditional Access basics</li>
+            <li>Monthly remote support and monitoring (retainer)</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="section-title">How I work</div>
+          <ol>
+            <li>30-minute onboarding call.</li>
+            <li>Assess environment and provide written plan.</li>
+            <li>Implement fixes and handover report.</li>
+            <li>Ongoing monthly support if retained.</li>
+          </ol>
+        </div>
+
+        <div style="margin-top:18px">
+          <div class="section-title">Quick PowerShell sample</div>
+          <pre>Connect-MgGraph -Scopes "User.Read.All","Directory.ReadWrite.All"
+
+# Create user and assign licence (example)
+$pwd = 'P@ssw0rd!'
+New-MgUser -DisplayName 'John Doe' -MailNickname 'jdoe' -UserPrincipalName 'jdoe@yourdomain.com' -AccountEnabled:$true -PasswordProfile @{ForceChangePasswordNextSignIn = $true; Password = $pwd}
+
+# Assign license
+$sku = 'contoso:ENTERPRISEPACK'
+Set-MgUserLicense -UserId 'jdoe@yourdomain.com' -AddLicenses @{SkuId=$sku}
+</pre>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="mailto:meghontin90@gmail.com?subject=Remote%20M365%20Support%20Inquiry">Contact for support</a>
+          <a class="ghost" href="#pricing">See pricing</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="section-title">Pricing (starting)</div>
+        <div class="pricing" id="pricing">
+          <div class="tier">
+            <h3>Starter</h3>
+            <div class="small">₦30,000 / month</div>
+            <p class="small">User management, email support, basic troubleshooting. Up to 5 users.</p>
+          </div>
+          <div class="tier">
+            <h3>Standard</h3>
+            <div class="small">₦80,000 / month</div>
+            <p class="small">Includes Teams and SharePoint support. PowerShell automation scripts. 6–25 users.</p>
+          </div>
+          <div class="tier">
+            <h3>Premium</h3>
+            <div class="small">Custom pricing</div>
+            <p class="small">Full remote administration, migrations, SLA and reporting.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="section-title">Testimonials</div>
+          <div class="testimonials">
+            <div class="testimonial"><strong>Client A</strong><br><span class="small">"Fixed our mailbox sync issue and automated license reports. Reliable."</span></div>
+            <div class="testimonial"><strong>Client B</strong><br><span class="small">"Fast, clear and professional. Reduced our support backlog."</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <div class="section-title">Contact</div>
+          <div class="small">Email: <a href="mailto:meghontin90@gmail.com">meghontin90@gmail.com</a></div>
+          <div class="small">LinkedIn: <a href="https://linkedin.com/in/destiny-meghontin" target="_blank">Destiny Meghontin</a></div>
+          <div style="margin-top:10px;font-size:13px;color:var(--muted)">Available for remote retainers and short-term projects.</div>
+        </div>
+      </aside>
+    </main>
+
+    <section style="margin-top:24px" class="card">
+      <div class="section-title">Case studies</div>
+      <div>
+        <strong>M365 migration — 10 users</strong>
+        <p class="small">Migrated 10 users from a Gmail-only setup to Microsoft 365. Completed in 48 hours. Result: centralized mail, Teams chat, and shared OneDrive folders.</p>
+      </div>
+      <div style="margin-top:12px">
+        <strong>License automation</strong>
+        <p class="small">Automated license assignment for new hires using PowerShell. Reduced manual onboarding time from 20 minutes to 3 minutes per user.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">Built and maintained by Meghontin Destiny. For edits or to request custom branding, contact <a href="mailto:meghontin90@gmail.com">meghontin90@gmail.com</a>.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth link scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const target=document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
